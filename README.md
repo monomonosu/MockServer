@@ -3,7 +3,6 @@ APIモックサーバーprism使用テスト。
 - とりあえずyaml作成
 
 Dockerを使用する場合
-- yamlファイル作成
 - docker run --init --rm -v $(pwd):/tmp -p 4010:4010 stoplight/prism:4 mock -h 0.0.0.0 "/tmp/swagger.yaml"
 
 ``` 
@@ -16,4 +15,10 @@ Dockerを使用する場合
 
 APIを叩く事ができる。
 
+
+ローカルで実行環境を構築する場合。  
+環境によって違いはあるかもだが、Docker起動後に下記コマンドでローカルで立ち上げる事ができるようになった。
+- npm install --save-dev @stoplight/prism-cli
+- prism mock swagger.yaml
+![hoge](images/2023-01-22%2016.55.32.png)
 
